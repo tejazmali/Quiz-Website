@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Round 1 | Quiz</title>
+   <link rel="stylesheet" href="/css/question.css">
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader"></div>
+    </div>
+    <header>Welcome to the Quiz!</header>
+    <div class="quiz-container">
+      <div id="timer" class="hidden">
+        Time Left: <span id="time-remaining"></span>
+      </div>
+      <button id="start-timer-btn" onclick="startTimer()">Start Timer</button>
+      <div class="question-section">
+        <h3 id="question-text">Loading...</h3>
+        <ul class="options" id="options-list">
+          <!-- Options dynamically generated -->
+        </ul>
+      </div>
+      <div id="feedback" class="hidden"></div>
+      <div id="explanation" class="hidden"></div>
+      <button id="back-btn" class="hidden" onclick="loadPreviousQuestion()">
+        Back
+      </button>
+      <button id="next-btn" class="hidden" onclick="loadNextQuestion()">
+        Next
+      </button>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Designed with ❤️ by
+        <a href="https://tejasmali.web.app" target="_blank">Tejas Mali</a>
+      </p>
+    </footer>
+
+    <script>
+      // Array of quiz questions with options, correct answers, and explanations
+      const questions = [
+        // Question 1
+        {
+          question:
+            "Q1. Who is the first Mathematician to be elected as the fellow of the Royal Society?",
+          options: ["Aryabhata", "Euclid", "Pythagoras", "Ramanujan"],
+          correct: "Ramanujan",
+          explanation:
+            "Ramanujan was the first Indian mathematician to be elected as a fellow of the Royal Society due to his extraordinary contributions to mathematics.",
+        },
+
+        // Question 2
+        {
+          question: "Q2. Name the film based on Srinivasan Ramanujan's life.",
+          options: [
+            "The Man Who Knew Infinity",
+            "A Beautiful Mind",
+            "A Disappearing Number",
+            "D + x + y",
+          ],
+          correct: "The Man Who Knew Infinity",
+          explanation:
+            "The movie 'The Man Who Knew Infinity' is a biographical drama about Srinivasa Ramanujan, focusing on his life and collaboration with G.H. Hardy.",
+        },
+
+        // Question 3
+        {
+          question:
+            "Q3. In 2017, based on Srinivasan Ramanujan and G.H. Hardy on several rewards. Do you know the title of the play?",
+          options: [
+            "The Man Who Knew Infinity",
+            "A Disappearing Number",
+            "C + x + y",
+            "A Beautiful Mind",
+          ],
+          correct: "A Disappearing Number",
+          explanation:
+            "'A Disappearing Number' is a play inspired by the life and mathematics of Ramanujan and his work with G.H. Hardy.",
+        },
+
+        // Question 4
+        {
+          question:
+            "Q4. Which year was celebrated as National Mathematics Day by the Government of India?",
+          options: ["2010", "2011", "2012", "2013"],
+          correct: "2012",
+          explanation:
+            "The Indian Government declared December 22, 2012, as National Mathematics Day to honor Srinivasa Ramanujan's birth anniversary.",
+        },
+
+        // Question 5
+        {
+          question:
+            "Q5. Aryabhata, one of the famous mathematicians from India, was born in ______.",
+          options: ["Kashmir", "Bihar", "Bengal", "Tamil Nadu"],
+          correct: "Bihar",
+          explanation:
+            "Aryabhata was born in Bihar, India, and made significant contributions to mathematics and astronomy.",
+        },
+
+        // Question 6
+        {
+          question:
+            "Q6. Who provided elegant results for the summation of series of squares and cubes?",
+          options: ["Aryabhata", "Ramanujan", "Euclid", "Pythagoras"],
+          correct: "Aryabhata",
+          explanation:
+            "Aryabhata was one of the first mathematicians to provide precise results for the summation of series.",
+        },
+
+        // Question 7
+        {
+          question: "Q7. What was Aryabhata's approximation of pi?",
+          options: ["3.1416", "22/7", "3.1428", "3.1"],
+          correct: "3.1416",
+          explanation:
+            "Aryabhata calculated the value of pi to four decimal places as 3.146, a remarkable approximation for his time.",
+        },
+
+        // Question 8
+        {
+          question: "Q8. What is the Pythagorean Theorem?",
+          options: [
+            "A mathematical formula for finding the length of the side of a right triangle",
+            "A spiritual belief that people are reborn after death",
+            "The equation that proves that the Earth revolves around the Sun",
+            "The only surviving book by Pythagoras",
+          ],
+          correct:
+            "A mathematical formula for finding the length of the side of a right triangle",
+          explanation:
+            "The Pythagorean Theorem states that in a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.",
+        },
+
+        // Question 9
+        {
+          question: "Q9. Who wrote the book Dasgitika?",
+          options: ["Ramanujan", "Aryabhata", "Euclid", "Archimedes"],
+          correct: "Aryabhata",
+          explanation:
+            "Aryabhata wrote Dasgitika, a work focusing on astronomy and mathematics.",
+        },
+
+        // Question 10
+        {
+          question: "Q10. Who was known as the father of mathematics?",
+          options: ["Archimedes", "Aryabhata", "Ramanujan", "Euclid"],
+          correct: "Archimedes",
+          explanation:
+            "Archimedes is often referred to as the father of mathematics for his foundational work in geometry, calculus, and mechanics.",
+        },
+      ];
+      
+    </script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

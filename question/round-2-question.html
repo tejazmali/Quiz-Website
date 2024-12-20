@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Round 2 | Quiz</title>
+    <link rel="stylesheet" href="/css/question.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader"></div>
+    </div>
+    <header>Welcome to the Quiz!</header>
+    <div class="quiz-container">
+      <div id="timer" class="hidden">
+        Time Left: <span id="time-remaining"></span>
+      </div>
+      <button id="start-timer-btn" onclick="startTimer()">Start Timer</button>
+      <div class="question-section">
+        <h3 id="question-text">Loading...</h3>
+        <ul class="options" id="options-list">
+          <!-- Options dynamically generated -->
+        </ul>
+      </div>
+      <div id="feedback" class="hidden"></div>
+      <div id="explanation" class="hidden"></div>
+      <button id="back-btn" class="hidden" onclick="loadPreviousQuestion()">
+        Back
+      </button>
+      <button id="next-btn" class="hidden" onclick="loadNextQuestion()">
+        Next
+      </button>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Designed with ❤️ by
+        <a href="https://tejasmali.web.app" target="_blank">Tejas Mali</a>
+      </p>
+    </footer>
+
+    <script>
+      // Array of quiz questions
+      const questions = [
+        {
+          question: "Q1. The associative property is applicable to:",
+          options: [
+            "Addition and subtraction",
+            "Multiplication and division",
+            "Addition and multiplication",
+            "Subtraction and division",
+          ],
+          correct: "Addition and multiplication",
+          explanation:
+            "The associative property holds true for addition and multiplication, but not for subtraction or division.",
+        },
+        {
+          question:
+            "Q2. What is the multiplicative identity of rational numbers?",
+          options: ["0", "1", "2", "-1"],
+          correct: "1",
+          explanation:
+            "The multiplicative identity is 1 because any number multiplied by 1 remains unchanged.",
+        },
+        {
+          question:
+            "Q3. In between 3/4 and 1, how many rational numbers are there?",
+          options: ["0", "1", "2", "Countless"],
+          correct: "Countless",
+          explanation:
+            "There are infinitely many rational numbers between any two distinct rational numbers.",
+        },
+        {
+          question: "Q4. Which of the statements below is correct?",
+          options: [
+            "When it comes to division, natural numbers are associative.",
+            "When it comes to division, whole numbers are associative.",
+            "When it comes to division, integers are associative.",
+            "When it comes to division, rational numbers are not associative.",
+          ],
+          correct:
+            "When it comes to division, rational numbers are not associative.",
+          explanation:
+            "The associative property does not apply to division in rational numbers or other number systems.",
+        },
+        {
+          question:
+            "Q5. If two lines intersect at a point, how many angles are formed?",
+          options: ["1", "2", "3", "4"],
+          correct: "4",
+          explanation:
+            "When two lines intersect, four angles are formed: two pairs of vertically opposite angles.",
+        },
+        {
+          question:
+            "Q6. The angles that share a common vertex and a common side are called:",
+          options: [
+            "Supplementary angles",
+            "Complementary angles",
+            "Adjacent angles",
+            "Vertical angles",
+          ],
+          correct: "Adjacent angles",
+          explanation:
+            "Adjacent angles share a common vertex and a common side, and their non-common sides do not overlap.",
+        },
+        {
+          question:
+            "Q7. Two adjacent angles whose non-common sides are opposite rays form a:",
+          options: [
+            "Linear pair",
+            "Right angle",
+            "Vertical angles",
+            "Perpendicular lines",
+          ],
+          correct: "Vertical angles",
+          explanation:
+            "Vertical angles are opposite angles formed when two lines intersect. They are always equal.",
+        },
+        {
+          question:
+            "Q8. What is the value of x if (x − 2) is a factor of the polynomial x² − 4x + 3?",
+          options: ["1", "2", "3", "4"],
+          correct: "2",
+          explanation:
+            "Substituting x = 2 into the polynomial x² − 4x + 3 gives a value of 0, confirming it as a factor.",
+        },
+        {
+          question:
+            "Q9. An athlete takes 10 rounds of a rectangular park, 40 m long and 30 m wide. Find the total distance covered by him.",
+          options: ["1400 m", "700 m", "70 m", "2800 m"],
+          correct: "1400 m",
+          explanation:
+            "The perimeter of the park is 2 × (40 + 30) = 140 m. For 10 rounds, the total distance is 10 × 140 = 1400 m.",
+        },
+        {
+          question:
+            "Q10. If the circumference of a circle is equal to the perimeter of a square, then which of the following is correct?",
+          options: [
+            "Area of square is equal to area of circle",
+            "Area of square is less than area of circle",
+            "Area of square is greater than area of circle",
+            "None of the above",
+          ],
+          correct: "Area of square is less than area of circle",
+          explanation:
+            "The square’s area is less than the circle's when their perimeter and circumference are equal.",
+        },
+      ];
+    </script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

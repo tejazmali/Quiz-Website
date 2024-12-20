@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Round 3 | Quiz</title>
+<link rel="stylesheet" href="/css/question.css">
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader"></div>
+    </div>
+    <header>Welcome to the Quiz!</header>
+    <div class="quiz-container">
+      <div id="timer" class="hidden">
+        Time Left: <span id="time-remaining"></span>
+      </div>
+      <button id="start-timer-btn" onclick="startTimer()">Start Timer</button>
+      <div class="question-section">
+        <h3 id="question-text">Loading...</h3>
+        <ul class="options" id="options-list">
+          <!-- Options dynamically generated -->
+        </ul>
+      </div>
+      <div id="feedback" class="hidden"></div>
+      <div id="explanation" class="hidden"></div>
+      <button id="back-btn" class="hidden" onclick="loadPreviousQuestion()">
+        Back
+      </button>
+      <button id="next-btn" class="hidden" onclick="loadNextQuestion()">
+        Next
+      </button>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Designed with ❤️ by
+        <a href="https://tejasmali.web.app" target="_blank">Tejas Mali</a>
+      </p>
+    </footer>
+
+    <script>
+      // Array of quiz questions with correct answers and explanations
+      const questions = [
+        {
+          question:
+            "Q1. If the sum of the interior angles of a regular polygon measures up to 1440°, then how many sides does the polygon have?",
+          options: ["8 sides", "9 sides", "10 sides", "12 sides"],
+          correct: "10 sides",
+          explanation:
+            "The sum of interior angles is given by the formula (n-2) × 180°, where n is the number of sides. Solving for n: (n-2) × 180 = 1440, so n = 10.",
+        },
+        {
+          question:
+            "Q2. What is the quadrilateral formed by the angle bisectors of a parallelogram?",
+          options: ["Square", "Rectangle", "Circle", "Rhombus"],
+          correct: "Rectangle",
+          explanation:
+            "The angle bisectors of a parallelogram always form a rectangle, regardless of the parallelogram's dimensions.",
+        },
+        {
+          question:
+            "Q3. Which of the quadrilaterals has all angles as right angles, opposite sides equal, and diagonals bisect each other?",
+          options: ["Rectangle", "Rhombus", "Square", "None of these"],
+          correct: "Rectangle",
+          explanation:
+            "A rectangle has all right angles, equal opposite sides, and diagonals that bisect each other.",
+        },
+        {
+          question:
+            "Q4. Diagonals of which of the following quadrilaterals do not bisect it into two congruent triangles?",
+          options: ["Rhombus", "Trapezium", "Square", "Rectangle"],
+          correct: "Trapezium",
+          explanation:
+            "Diagonals of a trapezium do not divide it into congruent triangles unless it is isosceles.",
+        },
+        {
+          question: "Q5. Which of the following are true about a rhombus?",
+          options: [
+            "The sides are all congruent.",
+            "The diagonals are congruent.",
+            "It has four right angles.",
+            "All of the above.",
+          ],
+          correct: "The sides are all congruent.",
+          explanation:
+            "A rhombus has all sides equal, but its diagonals are not always congruent, and it does not necessarily have right angles.",
+        },
+        {
+          question: "Q6. Which of the following are true about a square?",
+          options: [
+            "The diagonals are congruent.",
+            "The sides are congruent.",
+            "The diagonals are perpendicular.",
+            "All of the above.",
+          ],
+          correct: "All of the above.",
+          explanation:
+            "A square has congruent sides and diagonals, and its diagonals are perpendicular to each other.",
+        },
+        {
+          question:
+            "Q7. Two numbers are in the ratio 7:9. If the sum of the numbers is 112, then the larger number is:",
+          options: ["49", "72", "63", "42"],
+          correct: "63",
+          explanation:
+            "If the ratio is 7:9, the total parts are 16. The larger number is (9/16) × 112 = 63.",
+        },
+        {
+          question:
+            "Q8. Rakesh has Rs. 10 and Karan has 10 paise. Find the ratio of money with Rakesh and money with Karan.",
+          options: ["1/100", "100/1", "10/500", "5/2"],
+          correct: "100/1",
+          explanation:
+            "Rs. 10 = 1000 paise, so the ratio of money is 1000:10 = 100:1.",
+        },
+        {
+          question: "Q9. The average of the first 5 multiples of 9 is:",
+          options: ["20", "27", "28", "30"],
+          correct: "27",
+          explanation:
+            "The first 5 multiples of 9 are 9, 18, 27, 36, and 45. Their sum is 135, so the average is 135 ÷ 5 = 27.",
+        },
+        {
+          question:
+            "Q10. The sum of 10 numbers is 550. Find their average number.",
+          options: ["54", "56", "55", "58"],
+          correct: "55",
+          explanation:
+            "The average is the sum of the numbers divided by the count. 550 ÷ 10 = 55.",
+        },
+      ];
+    </script>
+     <script src="/js/script.js"></script>
+  </body>
+</html>

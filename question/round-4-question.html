@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Round 4 | Quiz</title>
+    <link rel="stylesheet" href="/css/question.css">
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader"></div>
+  </div>
+    <header>Welcome to the Quiz!</header>
+    <div class="quiz-container">
+      <div id="timer" class="hidden">Time Left: <span id="time-remaining"></span></div>
+      <button id="start-timer-btn" onclick="startTimer()">Start Timer</button>
+      <div class="question-section">
+        <h3 id="question-text">Loading...</h3>
+        <ul class="options" id="options-list">
+          <!-- Options dynamically generated -->
+        </ul>
+      </div>
+      <div id="feedback" class="hidden"></div>
+      <div id="explanation" class="hidden"></div>
+      <button id="back-btn" class="hidden" onclick="loadPreviousQuestion()">
+        Back
+      </button>
+      <button id="next-btn" class="hidden" onclick="loadNextQuestion()">
+        Next
+      </button>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Designed with ❤️ by
+        <a href="https://tejasmali.web.app" target="_blank">Tejas Mali</a>
+      </p>
+    </footer>
+
+    <script>
+// Array of quiz questions with correct answers and explanations
+const questions = [
+  
+  {
+    question: "Q1. A man walked diagonally across a square lot. Approximately, what was the percent saved by not walking along the edges?",
+    options: [
+      "20%",
+      "24%",
+      "29%",
+      "33%",
+    ],
+   
+    correct: "33%",
+    explanation: "Walking along the edges would involve two sides of the square, but walking diagonally saves approximately 33% of the distance.",
+  },
+  {
+    question: "Q2. The ratio between the perimeter and the breadth of a rectangle is 5:1. If the area of the rectangle is 216 sq. cm, what is the length of the rectangle?",
+    options: [
+      "16 cm",
+      "18 cm",
+      "24 cm",
+      "Data inadequate",
+    ],
+    correct: "18 cm",
+    explanation: "Using the formula for perimeter and area, solve for the length as 18 cm.",
+  },
+  {
+    question: "Q3. An article is at 10% more than the CP. If a discount of 10% is allowed, then which of the following is correct?",
+    options: [
+      "1% gain",
+      "1% loss",
+      "No gain no loss",
+      "1.1% loss",
+    ],
+    correct: "1% loss",
+    explanation: "If an article is priced 10% above cost and a 10% discount is given, there will be a 1% loss.",
+  },
+  {
+    question: "Q4. What time period is taken when interest is calculated half yearly?",
+    options: [
+      "Twice as much as the number of given years",
+      "Half as much as the number of given years",
+      "Same as the number of given years",
+      "None of these",
+    ],
+    correct: "Half as much as the number of given years",
+    explanation: "For half-yearly calculations, the time period is halved compared to yearly calculations.",
+  },
+  {
+    question: "Q5. At what rate per annum will Rs. 400/- amount to Rs. 585/- in 3 years?",
+    options: [
+      "10%",
+      "8%",
+      "12%",
+      "9%",
+    ],
+    correct: "12%",
+    explanation: "Using the simple interest formula, the rate is calculated as 12%.",
+  },
+  {
+    question: "Q6. From the given diagram, if ∠SOQ = 72° and ROQ = 2:3, then what are the values of angles ∠SOQ and ∠ROQ?",
+    image: "/image/6.png", // Add an image file for this question.
+    options: [
+      "54° and 36°",
+      "40° and 60°",
+      "72° and 108°",
+      "None of these",
+    ],
+    correct: "72° and 108°",
+    explanation: "The ratios 2:3 are proportional, leading to angle calculations of 72° and 108°.",
+    image: "/image/6.png", // Add an image file for this question.
+  },
+  {
+    question: "Q7. Find the value of ∠ABC if PQ || RS.",
+    image: "/image/7.png", // Add an image file for this construction question.
+    options: [
+      "70°",
+      "140°",
+      "110°",
+      "90°",
+    ],
+    correct: "110°",
+    explanation: "Using the properties of parallel lines and angles, the angle is calculated as 110°.",
+   
+  },
+  {
+    question: "Q8. A diagonal of a rectangle is inclined to one side of the rectangle at 25°. The acute angle between the diagonals is:",
+    options: [
+      "35°",
+      "50°",
+      "40°",
+      "25°",
+    ],
+    correct: "40°",
+    explanation: "The acute angle between the diagonals is derived using trigonometric relationships.",
+  },
+  {
+    question: "Q9. If the diagonals of a rhombus are 18 cm and 24 cm respectively, then its side is equal to:",
+    options: [
+      "16 cm",
+      "15 cm",
+      "20 cm",
+      "17 cm",
+    ],
+    correct: "15 cm",
+    explanation: "Using the Pythagorean theorem, the side length is calculated as 15 cm.",
+  },
+  {
+    question: "Q10. If three out of four points are collinear, then we get:",
+    options: [
+      "A line",
+      "A triangle",
+      "A quadrilateral",
+      "A square",
+    ],
+    correct: "A line",
+    explanation: "Three collinear points always form a straight line.",
+  },
+];
+
+  </script>
+   <script src="/js/script.js"></script>
+  </body>
+</html> 
